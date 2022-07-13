@@ -1,0 +1,491 @@
+/* RESET Y CONFIG GLOBAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    font-family:'Montserrat', sans-serif;
+    text-align: center;
+}
+
+/* LAYOUT DEL SITIO */
+.grid-container{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows:repeat(5, auto); 
+    grid-template-areas: 
+    'navbar navbar navbar'
+    'header header header'
+    'main   main    main'
+    'main   main    main'
+    'footer footer footer';
+}
+
+/* ESTILOS -NAVBAR */
+nav{
+    grid-area: navbar;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items:center;
+    z-index: 9;
+    position:sticky;
+    top: 0;
+    left: 0;
+    background-color: #019267;
+    padding: 10px;
+    border-bottom: 2px solid #000;
+}
+nav ul li{
+    display: inline;
+    list-style-type: none;
+    margin: 0 0 0 60px;
+
+}
+nav ul li .navLinks{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+nav ul li .navLinks:hover{
+    font-size:large;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+/* ESTILOS -HEADER */
+header{
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:flex-start;
+    background-image: url("../img/img-header.jpg");
+    background:linear-gradient(255,255,255,0.3);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 95vh;
+    text-align:start;
+    border-bottom: 2px solid #000;
+    padding: 20px;
+    color: #ffffff;
+    text-shadow: 4px 4px 2px rgb(10,10,10);
+}
+
+header .titulos{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(255,255,255,0.3);
+    padding: 20px;
+    border-radius: 15px;
+}
+header .titulos:hover{
+    transform:scale(1.1);
+    transition: all 1500ms;
+}
+
+header h1{
+    font-family: 'Bangers', cursive;
+    font-size: 70px;
+}
+header h2{
+    font-family: 'Bangers', cursive;
+    font-size: 35px;
+}
+
+/* ESTILOS -MAIN Y SUS SECTIONS */
+main{
+    grid-area: main;
+    border-bottom: 2px solid #000;
+    padding: 5px; 
+}
+section>*{
+    padding: 20px 0px;
+}
+
+section{
+    margin-bottom: 40px;
+
+}
+section .tituloSec{
+    font-family: 'Bangers', cursive;
+    font-size: 65px;
+    padding: 50px 0px;
+    text-align:left;
+}
+
+/* SECTION ABOUT US */
+.secNosotros .btnContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.secNosotros .btnContainer button{
+    background-color: #019267;
+    color: #cff800;
+    letter-spacing: 1px;
+    font-family: 'Bangers', cursive;
+    width: 180px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -3px 2px 1px rgb(55,55,55);
+}
+.secNosotros .btnContainer button:hover{
+    font-size:large;
+    transform:translate(3px, -3px);
+    box-shadow: -5px 5px 3px rgb(55,55,55);
+}
+
+#aboutContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.cardStaff{
+    width: 450px;
+    height:650px;
+    margin: 30px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color:#019267;
+    color: #CFF800;
+    padding-bottom: 20px;
+    text-align: center;
+    box-shadow: -3px 2px 1px rgb(55,55,55);  
+}
+.cardStaff img{
+    width: 100%;
+    height: 85%;
+}
+
+.cardEmp{
+    width: 400px;
+    height:150px;
+    margin: 50px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color:#019267;
+    color: #CFF800;
+    padding: 30px;
+    text-align: center;
+    box-shadow: -3px 2px 1px rgb(55,55,55);
+}
+
+.cardSedes{
+    width: 400px;
+    height:150px;
+    margin: 50px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color:#019267;
+    color: #CFF800;
+    padding: 30px;
+    text-align: center;
+    box-shadow: -3px 2px 1px rgb(55,55,55);
+}
+
+.cardBio{
+    width: 800px;
+    height:600px;
+    margin: 50px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color:#019267;
+    color: #CFF800;
+    padding: 50px;
+    text-align: center;
+    box-shadow: -3px 2px 1px rgb(55,55,55);
+}
+
+.cardStaff:hover{
+    transition: 800ms all ease-in;
+    transform:scale(1.1);
+    box-shadow: -5px 5px 3px rgb(55,55,55);
+}
+.cardEmp:hover{
+    transition: 800ms all ease-in;
+    transform:scale(1.3);
+    box-shadow: -5px 5px 3px rgb(55,55,55);
+}
+.cardBio:hover{
+    transition: 800ms all ease-in;
+    transform:scale(1.1);
+    box-shadow: -5px 5px 3px rgb(55,55,55);
+}
+.cardSedes:hover{
+    transition: 800ms all ease-in;
+    transform:scale(1.3);
+    box-shadow: -5px 5px 3px rgb(55,55,55);
+}
+
+.contBtn{
+    display: flex;
+    justify-content:center;
+}
+
+#contenedorClientes{
+    margin:50px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.cardClientes{
+    width:300px;
+    height:100px;
+    background-color:aqua;
+    border-bottom: 2px solid #000;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align:center;
+    padding: 10px;
+}
+#mostrarClientes{
+    width: 120px;
+    height:40px;
+    background:#019267;
+    border-radius: 5px;
+    border: 2px solid #000;
+    color:#fff;
+    margin: 30px;
+}
+#mostrarClientes:hover{
+    box-shadow: -3px 3px 4px rgb(55,55,55);
+    transform:translate(5px, -5px);
+    transition: 900ms all;
+}
+#btnClose{
+    width: 120px;
+    height:40px;
+    background:#019267;
+    border-radius: 5px;
+    border: 2px solid #000;
+    color:#fff;
+    margin: 30px;
+}
+#btnClose:hover{
+    box-shadow: -3px 3px 4px rgb(55,55,55);
+    transform:translate(5px, -5px);
+    transition: 900ms all;
+}
+
+.galeriaPet{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    background-color:#CFF800;
+}
+#petsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.cardPets{
+    width:220px;
+    height: 300px; 
+    border: 3px outset #fff;
+    border-radius: 10px;
+    padding:4px;
+}
+.cardPets h6{
+    font-weight:bold
+}
+ .cardPets img{
+    width: 100%;
+    height: 70%;
+ }
+.cardPets:hover{
+    background-color:lightseagreen;
+    color:#fff;
+}
+
+/* SECTION SERVICES */
+#contenedorServ{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;  
+}
+.tituloServicios{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.cardService >*{
+    padding-bottom: 10px;
+}
+
+.cardService{
+    width: 220px;
+    height: 330px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 90px;
+    margin: 10px;
+    background-color:#CFF800; 
+}
+
+.cardService:hover{
+    transform:translate(3px, -3px);
+    box-shadow: -5px 5px 3px rgb(55,55,55);
+}
+
+.btnServicios{
+    width: 120px;
+    height: 30px;
+    background:#019267;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+}
+.btnServicios:hover{
+    transform:translate(2px, -2px);
+    box-shadow: -3px 3px 2px rgb(55,55,55);
+}
+
+/* SECTION SHOP */
+#shopContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+} 
+.cardProductos{
+    width: 220px;
+    height: 370px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    background-color:#CFF800; 
+}
+.cardProductos:hover{
+    transform:translate(3px, -3px);
+    box-shadow: -5px 5px 3px rgb(55,55,55);
+}
+.cardProductos img{
+    width: 100%;
+    height: 60%; 
+}
+.cardProductos>*{
+    padding-bottom: 10px;
+}
+.botonAgregar{
+    width: 120px;
+    height: 30px;
+    background:#019267;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+}
+.botonAgregar:hover{
+    transform:translate(2px, -2px);
+    box-shadow: -3px 3px 2px rgb(55,55,55);
+}
+/* estilos carrito de compras */
+#contenedorCarrito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.productoEnCarrito>*{
+    padding-bottom:10px;
+}
+.productoEnCarrito{
+    width: 220px;
+    height: 350px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    color:#CFF800;
+    background-color:#019267;
+}
+.productoEnCarrito .avatar img{
+    width: 50%;
+    height: 50%;
+}
+.productoEnCarrito:hover{
+    box-shadow: -5px 5px 5px rgb(0,0,0);
+}
+
+.botonEliminar{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color:#CFF800;
+    margin-top:10px
+}
+.botonEliminar:hover{
+    transform:translate(2px, -2px);
+    box-shadow: -3px 3px 2px rgb(55,55,55);
+}
+
+/*SECTION CONTACT*/
+
+#campoForm{
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    font-size:30px;
+    margin-left: 25%;
+    width: 50%;
+    height: auto;
+    border: 5px outset #aaaaaa;
+    border-radius: 5px;
+    
+}
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.formContainer >*{
+    margin: 3px;
+    font-size: 18px;
+}
+#submit{
+    font-family: 'Bangers', cursive;
+    font-size:15px;
+    padding:2px 20px;
+}
+
+/* ESTILOS -FOOTER */
+footer{
+    grid-area: footer;
+    border-bottom: 2px solid #000;
+    background-color: #019267;
+    color: #CFF800;
+    text-align: center;
+    font-weight: bolder;
+    padding: 20px;
+}
